@@ -159,7 +159,7 @@ created: 2026-04-15
 - [x] phase を USER_REVIEW に更新
 
 ### USER_REVIEW
-- [ ] ドラフトPR作成（VCS_MODE=git_gh のみ）
+- [x] ドラフトPR作成（VCS_MODE=git_gh のみ）
 - [ ] 開発サーバー起動 → ユーザー動作確認（DEV_SERVER_SKILL）
 - [ ] レビュー指摘対応（必要な場合）
 - [ ] 設計書影響確認（※共通ルール参照）
