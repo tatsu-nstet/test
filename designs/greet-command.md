@@ -185,5 +185,3 @@ TEST_SPEC フェーズは本節を元にテストケースを作成する。
 | 名前未指定時 | エラー終了 | 既定値 "World" は意味を持たせにくい。CLI 慣習で素直 | brainstorm 確定事項4 |
 | 引数パーサ | 自前 while-case | `getopts` は長オプション非対応 | brainstorm 確定事項5 |
 
-<!-- ASSUMPTION: 未対応言語時の exit code を 2 に固定した。brainstorm 要検討事項1・案A は「エラー終了」とだけ記載され具体的な exit code は未指定。引数エラー (exit 1) と区別する意図で 2 を採用したが、CLI 慣習上 1 に統一する選択肢もある。ユーザー確認が取れたら本マーカーを削除する -->
-<!-- ASSUMPTION: 位置引数過多 (`greet Alice Bob`) の扱いを「エラー exit 1」と定義した。brainstorm・Issue 本文では明示されていない。最後の引数を優先する寛容仕様も取り得るが、CLI 慣習からエラーに倒した -->
