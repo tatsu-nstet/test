@@ -2,7 +2,7 @@
 slug: greet-command
 title: greet コマンドを追加
 issue: https://github.com/tatsu-nstet/test/issues/2
-phase: IMPL
+phase: BUILD
 created: 2026-04-15
 ---
 
@@ -147,10 +147,10 @@ created: 2026-04-15
 - [x] phase を次フェーズに更新
 
 ### IMPL
-- [ ] 実装
-- [ ] 設計書影響確認（※共通ルール参照）
-- [ ] セルフレビュー反映
-- [ ] phase を次フェーズに更新
+- [x] 実装
+- [x] 設計書影響確認（※共通ルール参照）
+- [x] セルフレビュー反映
+- [x] phase を次フェーズに更新
 
 ### BUILD
 - [ ] 静的解析通過（CHECK_CMD）

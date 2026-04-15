@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+# greet: 名前を受け取って挨拶文を出力する最小 CLI
+# 詳細は designs/greet-command.md を参照
+# bash 3.2+ 互換（連想配列・bash 4+ 機能は使わない）
+
+set -u
+
+usage() {
+  cat <<'EOF'
+Usage: greet [--lang <en|ja>] <name>
+       greet --help
+
+Options:
+  --lang <code>   Language code. en (default) or ja.
+  -h, --help      Show this help and exit.
+
+Examples:
+  greet Alice              # => Hello, Alice!
+  greet --lang ja Alice    # => こんにちは、Alice！
+EOF
+}
+
+err() {
+  printf '%s\n' "$*" 1>&2
+}
+
+name=""
+lang="en"
+
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --lang)
+      if [ $# -lt 2 ]; then
+        err "missing value for --lang"
+        usage 1>&2
+        exit 1
+      fi
+      lang="$2"
+      shift 2
+      ;;
+    --help|-h)
+      usage
+      exit 0
+      ;;
+    --*|-?*)
+      err "unknown option: $1"
+      usage 1>&2
+      exit 1
+      ;;
+    *)
+      if [ -n "$name" ]; then
+        err "too many positional arguments"
+        exit 1
+      fi
+      name="$1"
+      shift
+      ;;
+  esac
+done
+
+# 名前未指定（空文字・未設定）の検証
+if [ -z "$name" ]; then
+  usage 1>&2
+  exit 1
+fi
+
+case "$lang" in
+  en)
+    echo "Hello, ${name}!"
+    ;;
+  ja)
+    echo "こんにちは、${name}！"
+    ;;
+  *)
+    err "unsupported language: ${lang}"
+    exit 2
+    ;;
+esac
