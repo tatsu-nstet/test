@@ -2,7 +2,7 @@
 slug: greet-command
 title: greet コマンドを追加
 issue: https://github.com/tatsu-nstet/test/issues/2
-phase: SPEC_SYNC
+phase: TEST_SPEC
 created: 2026-04-15
 ---
 
@@ -137,9 +137,9 @@ created: 2026-04-15
 - [x] phase を次フェーズに更新
 
 ### SPEC_SYNC
-- [ ] 他設計書への波及確認・反映
-- [ ] セルフレビュー反映
-- [ ] phase を次フェーズに更新
+- [x] 他設計書への波及確認・反映
+- [x] セルフレビュー反映
+- [x] phase を次フェーズに更新
 
 ### TEST_SPEC
 - [ ] テスト仕様書執筆
