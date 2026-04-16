@@ -55,6 +55,8 @@ plugin の README および `.claude-develop.conf.example` の手順に従って
    git remote add origin git@github-tatsu-nstet:tatsu-nstet/test.git
    git fetch origin
    git reset --hard origin/main
+   git branch -m master main
+   git branch --set-upstream-to=origin/main main
    ```
 
 ### 終了時（環境クリア）
