@@ -40,13 +40,22 @@ plugin の README および `.claude-develop.conf.example` の手順に従って
 ### 前提（常設の状態）
 
 - リモート `tatsu-nstet/test` の `main` ブランチは常設。tracked file は CLAUDE.md のみを保持（更新コミットの追加は可）。
-- ローカル作業ディレクトリは CLAUDE.md のみが初期状態（`.git` も含め毎回消す運用）。
+- ローカル作業ディレクトリは空の状態から始める（`.git` も含め毎回全削除→clone する運用）。
+- CLAUDE.md はリモートの `main` に tracked されているため、clone で復元される。ローカルに退避する必要はない。
 - SSH は `~/.ssh/config` にエイリアス `github-tatsu-nstet` が設定済み（HostName github.com / IdentityFile id_ed25519_github_tatsu-nstet）。GitHub には SSH URL `git@github-tatsu-nstet:tatsu-nstet/<repo>.git` で接続する（`git@github.com:` 直打ちは鍵が効かないため使わない）。
 
 ### 開始時
 
-- SSH エイリアスで clone する:
-  `git clone git@github-tatsu-nstet:tatsu-nstet/test.git .`
+1. CLAUDE.md 以外を削除する:
+   `find /home/tatsu/claude/test -mindepth 1 -not -name 'CLAUDE.md' -exec rm -rf {} + 2>/dev/null; true`
+2. git を初期化しリモートから復元する:
+   ```bash
+   cd /home/tatsu/claude/test
+   git init
+   git remote add origin git@github-tatsu-nstet:tatsu-nstet/test.git
+   git fetch origin
+   git reset --hard origin/main
+   ```
 
 ### 終了時（環境クリア）
 
@@ -55,4 +64,4 @@ plugin の README および `.claude-develop.conf.example` の手順に従って
   - feature ブランチは `git push origin --delete <branch>`
   - Projects item は Issue 削除で自動連動削除
   - `main` ブランチは削除しない
-- ローカル: CLAUDE.md のみを残し、他（`.git/` 含むテスト生成物一式）は削除する。
+- ローカル: 全削除する（CLAUDE.md 含む）。次回開始時に clone で復元される。
