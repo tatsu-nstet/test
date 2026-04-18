@@ -2,7 +2,7 @@
 slug: test-output
 title: テスト出力
 issue: 
-phase: TEST_SPEC
+phase: IMPL
 created: 2026-04-18
 ---
 
@@ -123,9 +123,9 @@ N/A: 外部依存なし（シェル `date` コマンドのみ使用）。
 - [x] phase を次フェーズに更新
 
 ### TEST_SPEC
-- [ ] テスト仕様書執筆
-- [ ] セルフレビュー反映
-- [ ] phase を次フェーズに更新
+- [x] テスト仕様書執筆
+- [x] セルフレビュー反映
+- [x] phase を次フェーズに更新
 
 ### IMPL
 - [ ] 実装
