@@ -2,7 +2,7 @@
 slug: test-output
 title: テスト出力
 issue: 
-phase: USER_REVIEW
+phase: DONE
 created: 2026-04-18
 ---
 
@@ -141,10 +141,10 @@ N/A: 外部依存なし（シェル `date` コマンドのみ使用）。
 
 ### USER_REVIEW
 - [x] ドラフトPR作成（VCS_MODE=git_gh のみ）
-- [ ] 開発サーバー起動 → ユーザー動作確認（DEV_SERVER_SKILL）
-- [ ] レビュー指摘対応（必要な場合）
-- [ ] 設計書影響確認（※共通ルール参照）
-- [ ] PR Ready化・マージ（VCS_MODE=git_gh のみ）
-- [ ] 外部ステータス Done 化（任意）
-- [ ] lock ファイル削除
-- [ ] phase を DONE に更新
+- [x] 開発サーバー起動 → ユーザー動作確認（DEV_SERVER_SKILL）
+- [x] レビュー指摘対応（必要な場合）
+- [x] 設計書影響確認（※共通ルール参照）
+- [x] PR Ready化・マージ（VCS_MODE=git_gh のみ）
+- [x] 外部ステータス Done 化（任意）
+- [x] lock ファイル削除
+- [x] phase を DONE に更新
