@@ -2,7 +2,7 @@
 slug: test-output
 title: テスト出力
 issue: 
-phase: BUILD
+phase: USER_REVIEW
 created: 2026-04-18
 ---
 
@@ -134,10 +134,10 @@ N/A: 外部依存なし（シェル `date` コマンドのみ使用）。
 - [x] phase を次フェーズに更新
 
 ### BUILD
-- [ ] 静的解析通過（CHECK_CMD）
-- [ ] 自動テスト通過（TEST_CMD）
-- [ ] 設計書影響確認（※共通ルール参照）
-- [ ] phase を USER_REVIEW に更新
+- [x] 静的解析通過（CHECK_CMD）
+- [x] 自動テスト通過（TEST_CMD）
+- [x] 設計書影響確認（※共通ルール参照）
+- [x] phase を USER_REVIEW に更新
 
 ### USER_REVIEW
 - [ ] ドラフトPR作成（VCS_MODE=git_gh のみ）
