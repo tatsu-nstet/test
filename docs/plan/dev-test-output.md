@@ -2,7 +2,7 @@
 slug: test-output
 title: テスト出力
 issue: 
-phase: DESIGN
+phase: SPEC_SYNC
 created: 2026-04-18
 ---
 
@@ -111,11 +111,11 @@ N/A: 外部依存なし（シェル `date` コマンドのみ使用）。
 - [x] phase を次フェーズに更新
 
 ### DESIGN
-- [ ] 並行競合チェック
-- [ ] lock ファイル作成
-- [ ] 設計書執筆・更新
-- [ ] セルフレビュー反映
-- [ ] phase を次フェーズに更新
+- [x] 並行競合チェック
+- [x] lock ファイル作成
+- [x] 設計書執筆・更新
+- [x] セルフレビュー反映
+- [x] phase を次フェーズに更新
 
 ### SPEC_SYNC
 - [ ] 他設計書への波及確認・反映
